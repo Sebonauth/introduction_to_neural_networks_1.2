@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Early Beginnings and Key Milestones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            font-size: 150%;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            display: none; /* Initially hidden */
+            opacity: 0; /* Initially invisible for fade-in effect */
+            transition: opacity 0.5s ease-in; /* Fade-in effect */
+        }
+        p {
+            line-height: 1.6;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        .image-placeholder, .continue-button, .vocab-section, .why-it-matters {
+            text-align: left;
+            margin: 0 20px;
+        }
+        .image-placeholder img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .vocab-section {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .vocab-section h3 {
+            color: #1e90ff;
+            font-size: 0.75em; /* Reduced heading font size to 50% */
+            margin-bottom: 5px;
+            margin-top: 5px; /* Reduced space above the heading */
+        }
+        .vocab-section h4 {
+            color: #000;
+            font-size: 0.9em;
+            margin-top: 10px;
+            margin-bottom: 8px;
+        }
+        .vocab-term {
+            font-weight: bold;
+            color: #1e90ff;
+        }
+        .why-it-matters {
+            background-color: #ffe6f0;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .why-it-matters h3 {
+            color: #d81b60;
+            font-size: 0.75em; /* Reduced heading font size to 50% */
+            margin-bottom: 5px;
+            margin-top: 5px; /* Reduced space above the heading */
+        }
+        .why-it-matters h4 {
+            color: #000;
+            font-size: 0.9em;
+            margin-top: 10px;
+            margin-bottom: 8px;
+        }
+        .continue-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 15px;
+            color: #ffffff;
+            background-color: #007bff;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Introduction Section -->
+    <section id="section1">
+        <p>Our story begins in the 1940s, a time when the world was rebuilding and reimagining the future after World War II.</p>
+        <div class="continue-button" onclick="showNextSection(2)">Continue</div>
+    </section>
+
+    <section id="section2">
+        <p>In 1943, Warren McCulloch, a neuroscientist, and Walter Pitts, a logician, published a groundbreaking paper titled <em>"A Logical Calculus of Ideas Immanent in Nervous Activity."</em> They proposed a simplified model of how neurons in the brain might work, using electrical circuits to mimic neural behavior.</p>
+        <div class="image-placeholder">
+            <img src="path-to-image-mcculloch-pitts.jpg" alt="Black-and-white portrait of McCulloch and Pitts collaborating over neuron sketches and logical diagrams">
+        </div>
+        <div class="continue-button" onclick="showNextSection(3)">Continue</div>
+    </section>
+
+    <section id="section3">
+        <p>Their model represented neurons as simple on/off switches, laying the foundation for artificial neural networks by showing how complex functions could arise from interconnected simple units.</p>
+        
+        <div class="vocab-section">
+            <h3>Build Your Vocab</h3>
+            <h4>Artificial Neuron</h4>
+            An artificial neuron is a mathematical model inspired by the biological neuron. It processes inputs and produces an output based on a certain activation function.
+        </div>
+        <div class="continue-button" onclick="showNextSection(4)">Continue</div>
+    </section>
+
+    <section id="section4">
+        <p>Fast forward to 1958, Frank Rosenblatt, a psychologist, introduced the perceptron, the first artificial neural network capable of learning. The perceptron could recognize patterns and was initially used for image recognition tasks.</p>
+        <div class="image-placeholder">
+            <img src="path-to-image-perceptron.jpg" alt="Diagram of a perceptron showing inputs with weights leading to a neuron that produces an output">
+        </div>
+        <div class="vocab-section">
+            <h3>Build Your Vocab</h3>
+            <h4>Perceptron</h4>
+            A perceptron is a type of artificial neuron that uses a weighted sum of its inputs and passes it through an activation function to produce an output.
+        </div>
+        <div class="continue-button" onclick="showNextSection(5)">Continue</div>
+    </section>
+
+    <section id="section5">
+        <div class="why-it-matters">
+            <h3>Why It Matters</h3>
+            <h4>Perceptron</h4>
+            The perceptron demonstrated that machines could learn from data, a foundational concept in the field of machine learning.
+        </div>
+    </section>
+
+    <script>
+        // Show the first section initially
+        document.getElementById("section1").style.display = "block";
+        document.getElementById("section1").style.opacity = "1"; // Make the first section visible
+
+        // Function to show the next section with fade-in and then scroll to it
+        function showNextSection(nextSectionId) {
+            const currentButton = event.target;
+            const nextSection = document.getElementById("section" + nextSectionId);
+            
+            // Hide the clicked button
+            currentButton.style.display = "none";
+            
+            // Show the next section with a fade-in effect
+            nextSection.style.display = "block";
+            setTimeout(() => {
+                nextSection.style.opacity = "1"; // Fade in the section
+            }, 10);
+
+            // Scroll to the new section after it fades in
+            setTimeout(() => {
+                nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 500); // Delay scrolling until fade-in completes
+        }
+    </script>
+
+</body>
+</html>
