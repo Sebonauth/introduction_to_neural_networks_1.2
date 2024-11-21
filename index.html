@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Early Beginnings and Key Milestones</title>
+    <title>A Dream of Thinking Machines</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,34 +18,43 @@
             margin-bottom: 20px;
             padding: 20px;
             background-color: #ffffff;
-            display: none; /* Initially hidden */
-            opacity: 0; /* Initially invisible for fade-in effect */
-            transition: opacity 0.5s ease-in; /* Fade-in effect */
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
         }
-        p {
+        h1, h3, h4 {
+            color: #333;
+            margin-top: 20px;
+        }
+        p, li {
             line-height: 1.6;
             color: #444;
             margin-bottom: 20px;
         }
-        .image-placeholder, .continue-button, .vocab-section, .why-it-matters {
-            text-align: left;
-            margin: 0 20px;
+        ul {
+            padding-left: 20px;
         }
-        .image-placeholder img {
+        .image-placeholder, .interactive-placeholder, .continue-button, .vocab-section, .why-it-matters, .test-your-knowledge, .faq-section, .stop-and-think {
+            text-align: left;
+        }
+        .image-placeholder img, .interactive-placeholder img {
             max-width: 100%;
             height: auto;
             border-radius: 5px;
         }
-        .vocab-section {
-            background-color: #f0f8ff;
+        .vocab-section, .why-it-matters, .test-your-knowledge, .faq-section, .stop-and-think {
             padding: 20px;
             border-radius: 8px;
+            margin-top: 20px;
+        }
+        .vocab-section {
+            background-color: #f0f8ff;
         }
         .vocab-section h3 {
             color: #1e90ff;
-            font-size: 0.75em; /* Reduced heading font size to 50% */
+            font-size: 0.75em;
             margin-bottom: 5px;
-            margin-top: 5px; /* Reduced space above the heading */
+            margin-top: 5px;
         }
         .vocab-section h4 {
             color: #000;
@@ -58,16 +68,59 @@
         }
         .why-it-matters {
             background-color: #ffe6f0;
-            padding: 20px;
-            border-radius: 8px;
         }
         .why-it-matters h3 {
             color: #d81b60;
-            font-size: 0.75em; /* Reduced heading font size to 50% */
+            font-size: 0.75em;
             margin-bottom: 5px;
-            margin-top: 5px; /* Reduced space above the heading */
+            margin-top: 5px;
         }
         .why-it-matters h4 {
+            color: #000;
+            font-size: 0.9em;
+            margin-top: 10px;
+            margin-bottom: 8px;
+        }
+        .test-your-knowledge {
+            background-color: #e6ffe6;
+        }
+        .test-your-knowledge h3 {
+            color: #28a745;
+            font-size: 0.75em;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        .test-your-knowledge h4 {
+            color: #000;
+            font-size: 0.9em;
+            margin-top: 10px;
+            margin-bottom: 8px;
+        }
+        .test-your-knowledge p {
+            margin-bottom: 15px;
+        }
+        .check-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 15px;
+            color: #ffffff;
+            background-color: #28a745;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
+        }
+        .faq-section {
+            background-color: #fffbea;
+        }
+        .faq-section h3 {
+            color: #ffcc00;
+            font-size: 0.75em;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        .faq-section h4 {
             color: #000;
             font-size: 0.9em;
             margin-top: 10px;
@@ -83,81 +136,296 @@
             text-decoration: none;
             cursor: pointer;
         }
+        .stop-and-think {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+        }
+        .stop-and-think h3 {
+            color: #856404;
+            font-size: 0.75em;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        .stop-and-think h4 {
+            color: #000;
+            font-size: 0.9em;
+            margin-top: 10px;
+            margin-bottom: 8px;
+        }
+        .reveal-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 15px;
+            color: #ffffff;
+            background-color: #ffc107;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
+        }
     </style>
 </head>
 <body>
-
-    <!-- Introduction Section -->
     <section id="section1">
-        <p>Our story begins in the 1940s, a time when the world was rebuilding and reimagining the future after World War II.</p>
+        <h1>A Dream of Thinking Machines</h1>
+        <p>Our story begins in 1943, when two scientists, Warren McCulloch and Walter Pitts, were pondering a fascinating question: Could we build a machine that learns like the human brain?</p>
         <div class="continue-button" onclick="showNextSection(2)">Continue</div>
     </section>
 
     <section id="section2">
-        <p>In 1943, Warren McCulloch, a neuroscientist, and Walter Pitts, a logician, published a groundbreaking paper titled <em>"A Logical Calculus of Ideas Immanent in Nervous Activity."</em> They proposed a simplified model of how neurons in the brain might work, using electrical circuits to mimic neural behavior.</p>
-        <div class="image-placeholder">
-            <img src="images/2.png" alt="Black-and-white portrait of McCulloch and Pitts collaborating over neuron sketches and logical diagrams">
-        </div>
+        <p>It might seem obvious now, but in 1943, this was a radical idea. Computers were still in their infancy - huge machines that could barely handle basic calculations. Yet these scientists dared to dream of machines that could think and learn.</p>
         <div class="continue-button" onclick="showNextSection(3)">Continue</div>
     </section>
 
     <section id="section3">
-        <p>Their model represented neurons as simple on/off switches, laying the foundation for artificial neural networks by showing how complex functions could arise from interconnected simple units.</p>
-        
+        <p>They started by looking at the brain&apos;s basic building block: the neuron. Each of our roughly 86 billion neurons is like a tiny decision-maker, taking in signals from other neurons and deciding whether to fire its own signal in response.</p>
+        <div class="image-placeholder">
+            <img src="/placeholder.svg?height=200&width=400" alt="Comparison of biological neuron and mathematical model">
+        </div>
         <div class="vocab-section">
             <h3>Build Your Vocab</h3>
-            <h4>Artificial Neuron</h4>
-            An artificial neuron is a mathematical model inspired by the biological neuron. It processes inputs and produces an output based on a certain activation function.
+            <h4>Neuron</h4>
+            <p>The basic unit of computation in both biological and artificial neural networks. In your brain, it&apos;s a cell that processes and transmits information through electrical and chemical signals.</p>
         </div>
         <div class="continue-button" onclick="showNextSection(4)">Continue</div>
     </section>
 
     <section id="section4">
-        <p>Fast forward to 1958, Frank Rosenblatt, a psychologist, introduced the perceptron, the first artificial neural network capable of learning. The perceptron could recognize patterns and was initially used for image recognition tasks.</p>
-        <div class="image-placeholder">
-            <img src="path-to-image-perceptron.jpg" alt="Diagram of a perceptron showing inputs with weights leading to a neuron that produces an output">
-        </div>
-        <div class="vocab-section">
-            <h3>Build Your Vocab</h3>
-            <h4>Perceptron</h4>
-            A perceptron is a type of artificial neuron that uses a weighted sum of its inputs and passes it through an activation function to produce an output.
+        <p>McCulloch and Pitts had a breakthrough insight: what if we could model this behavior mathematically? They created a simplified version of a neuron that could take multiple inputs, combine them, and produce an output based on whether the combined input exceeded a certain threshold.</p>
+        <div class="stop-and-think">
+            <h3>Stop and Think</h3>
+            <h4>Look around you. Can you think of any everyday decisions that follow this simple &apos;threshold&apos; pattern?</h4>
+            <button class="reveal-button" onclick="revealThought('thought1')">Reveal Thought</button>
+            <p id="thought1" style="display: none;">Think about deciding whether to wear a jacket. You might consider the temperature (input 1) and whether it&apos;s raining (input 2). If their combined &apos;discomfort factor&apos; exceeds your threshold, you wear the jacket!</p>
         </div>
         <div class="continue-button" onclick="showNextSection(5)">Continue</div>
     </section>
 
     <section id="section5">
+        <p>But the real hero of our story appears in 1957. His name was Frank Rosenblatt, and he was about to create something that would change everything: the Perceptron.</p>
+        <p>Imagine the excitement when Rosenblatt unveiled his creation at a press conference. The New York Times boldly proclaimed that a new machine was born that could learn, and would eventually be able to walk, talk, see, write, and even reproduce itself! The public was captivated.</p>
+        <div class="continue-button" onclick="showNextSection(6)">Continue</div>
+    </section>
+
+    <section id="section6">
+        <p>And they had good reason to be excited. The Perceptron wasn&apos;t just another calculating machine - it was the first artificial neural network that could learn from its mistakes. Show it examples of patterns, tell it when it was wrong, and it would gradually get better at recognizing those patterns.</p>
+        <div class="interactive-placeholder">
+            <img src="/placeholder.svg?height=300&width=500" alt="Interactive demonstration shows a simple perceptron learning to recognize basic patterns, with users able to train it by showing examples">
+        </div>
+        <div class="vocab-section">
+            <h3>Build Your Vocab</h3>
+            <h4>Perceptron</h4>
+            <p>The first trainable neural network, capable of learning to classify patterns by adjusting its weights based on mistakes.</p>
+        </div>
+        <div class="continue-button" onclick="showNextSection(7)">Continue</div>
+    </section>
+
+    <section id="section7">
+        <p>But then came the plot twist. In 1969, Marvin Minsky and Seymour Papert published a book that seemed to shatter everyone&apos;s dreams. They mathematically proved that perceptrons couldn&apos;t solve many simple problems. The most famous example was the XOR problem - essentially asking the network to recognize when two inputs are different.</p>
+        <div class="stop-and-think">
+            <h3>Stop and Think</h3>
+            <h4>Why do you think not being able to solve XOR was such a big deal?</h4>
+            <button class="reveal-button" onclick="revealThought('thought2')">Reveal Thought</button>
+            <p id="thought2" style="display: none;">If a system can&apos;t handle this simple logical operation, how could it ever handle complex real-world problems? It would be like having a calculator that could only add and subtract, but not multiply or divide.</p>
+        </div>
+        <div class="continue-button" onclick="showNextSection(8)">Continue</div>
+    </section>
+
+    <section id="section8">
+        <p>The AI winter had begun. Funding dried up. Researchers moved on to other fields. Neural networks became a scientific dead end. Or so it seemed...</p>
+        <div class="image-placeholder">
+            <img src="/placeholder.svg?height=200&width=400" alt="Dramatic visualization of funding and research interest dropping during the AI winter">
+        </div>
+        <div class="continue-button" onclick="showNextSection(9)">Continue</div>
+    </section>
+
+    <section id="section9">
+        <p>But a few persistent researchers refused to give up. They knew there had to be a way around the limitations Minsky and Papert had identified. The answer, they believed, lay in adding more layers to the network - creating what we now call &apos;hidden layers.&apos;</p>
+        <p>The only problem? Nobody knew how to train these deeper networks effectively.</p>
         <div class="why-it-matters">
             <h3>Why It Matters</h3>
-            <h4>Perceptron</h4>
-            The perceptron demonstrated that machines could learn from data, a foundational concept in the field of machine learning.
+            <p>This persistence in the face of setbacks is a crucial lesson in scientific progress. Sometimes the biggest breakthroughs come after periods of apparent failure.</p>
+        </div>
+        <div class="continue-button" onclick="showNextSection(10)">Continue</div>
+    </section>
+
+    <section id="section10">
+        <p>Enter backpropagation. While its mathematical foundations had existed since 1963, it wasn&apos;t until the 1980s that researchers like Geoffrey Hinton, David Rumelhart, and Ronald Williams showed how it could be used to train multi-layer neural networks.</p>
+        <p>Think of backpropagation like a teacher giving feedback to a classroom of students working together. When the class gets an answer wrong, the teacher needs to figure out which students contributed to the mistake and help each one improve. Backpropagation does this automatically for each &apos;neuron&apos; in the network.</p>
+        <div class="interactive-placeholder">
+            <img src="/placeholder.svg?height=300&width=500" alt="Interactive visualization shows how errors propagate backward through a neural network during training">
+        </div>
+        <div class="continue-button" onclick="showNextSection(11)">Continue</div>
+    </section>
+
+    <section id="section11">
+        <p>But even with backpropagation, neural networks still weren&apos;t living up to their promise. They needed three key ingredients that wouldn&apos;t come together until the 2010s:</p>
+        <ol>
+            <li>Massive amounts of data to learn from</li>
+            <li>Powerful computers to process that data</li>
+            <li>Clever algorithms to make the learning efficient</li>
+        </ol>
+        <p>It was like having the recipe for a feast but missing the ingredients, the kitchen, and the cooking skills all at once.</p>
+        <div class="test-your-knowledge">
+            <h3>Test Your Knowledge</h3>
+            <h4>Which development do you think came first?</h4>
+            <p>
+                <label><input type="radio" name="development-answer" value="option1"> Powerful computers (GPUs)</label><br>
+                <label><input type="radio" name="development-answer" value="option2"> Big datasets</label><br>
+                <label><input type="radio" name="development-answer" value="option3"> Efficient algorithms</label>
+            </p>
+            <button class="check-button" onclick="checkDevelopmentAnswer()">Check</button>
+            <div id="development-result" style="display: none; margin-top: 10px; font-weight: bold;"></div>
+            <div id="development-explanation" style="display: none; margin-top: 10px;"></div>
+        </div>
+        <div class="continue-button" onclick="showNextSection(12)">Continue</div>
+    </section>
+
+    <section id="section12">
+        <p>And then everything changed. Remember that 2012 competition we started with? Let&apos;s set the scene properly.</p>
+        <p>The ImageNet competition was the Olympics of computer vision. Each year, teams competed to build systems that could recognize objects in photos - everything from pandas to paperclips. Before 2012, the best systems used hand-crafted features and complex algorithms. They were getting better, but slowly.</p>
+        <div class="image-placeholder">
+            <img src="/placeholder.svg?height=200&width=400" alt="Graph showing ImageNet competition error rates from 2010-2012, with a dramatic drop in 2012">
+        </div>
+        <div class="continue-button" onclick="showNextSection(13)">Continue</div>
+    </section>
+
+    <section id="section13">
+        <p>Enter Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton with their neural network &apos;AlexNet&apos;. When the results were announced, it wasn&apos;t just a victory - it was a revolution. Their error rate of 15.3% crushed the second-place system&apos;s 26.2%.</p>
+        <p>But here&apos;s the really interesting part: AlexNet wasn&apos;t doing anything fundamentally different from the neural networks of the 1980s. It was just... bigger. Much bigger.</p>
+        <div class="vocab-section">
+            <h3>Build Your Vocab</h3>
+            <h4>Deep Learning</h4>
+            <p>Neural networks with many layers that can automatically learn features from raw data. The &apos;deep&apos; refers to the depth of the layers, not any mysterious complexity.</p>
+        </div>
+        <div class="continue-button" onclick="showNextSection(14)">Continue</div>
+    </section>
+
+    <section id="section14">
+        <p>Remember those three ingredients we mentioned? They had finally come together:</p>
+        <p>The team used two NVIDIA GTX 580 GPUs - graphics cards gamers used to play Call of Duty were repurposed to train neural networks. They trained on ImageNet, a dataset of over a million images. And they employed clever tricks like &apos;ReLU&apos; activation functions and &apos;dropout&apos; to make the training work efficiently.</p>
+        <div class="stop-and-think">
+            <h3>Stop and Think</h3>
+            <h4>Why do you think graphics cards (GPUs) were so important for neural networks?</h4>
+            <button class="reveal-button" onclick="revealThought('thought3')">Reveal Thought</button>
+            <p id="thought3" style="display: none;">GPUs are designed to perform many simple calculations in parallel - perfect for the matrix multiplications that neural networks need. It&apos;s like having a thousand calculators working simultaneously instead of one very fast calculator.</p>
+        </div>
+        <div class="continue-button" onclick="showNextSection(15)">Continue</div>
+    </section>
+
+    <section id="section15">
+        <p>The floodgates opened. Suddenly, neural networks - now rebranded as &apos;deep learning&apos; - were everywhere. Google used them to improve speech recognition in Android phones. Facebook used them for face recognition. Microsoft used them to create real-time translation in Skype.</p>
+        <div class="interactive-placeholder">
+            <img src="/placeholder.svg?height=300&width=500" alt="Interactive timeline showing major deep learning achievements from 2012-present, with users able to explore each breakthrough">
+        </div>
+        <div class="continue-button" onclick="showNextSection(16)">Continue</div>
+    </section>
+
+    <section id="section16">
+        <p>By 2015, deep neural networks could:</p>
+        <ul>
+            <li>Recognize faces better than humans</li>
+            <li>Generate eerily realistic images</li>
+            <li>Beat world champions at Go (a feat many thought was decades away)</li>
+            <li>Write coherent text</li>
+            <li>Even compose music</li>
+        </ul>
+        <p>We had entered the age of deep learning.</p>
+        <div class="why-it-matters">
+            <h3>Why It Matters</h3>
+            <p>This isn&apos;t just about better technology - it&apos;s about computers beginning to do things we thought only humans could do. It raises fascinating questions about intelligence, creativity, and what makes us human.</p>
+        </div>
+        <div class="continue-button" onclick="showNextSection(17)">Continue</div>
+    </section>
+
+    <section id="section17">
+        <p>But here&apos;s the most exciting part: we&apos;re still just at the beginning. The neural networks we use today are still incredibly simple compared to the human brain. Your brain has about 86 billion neurons making roughly 100 trillion connections. AlexNet had just 650,000 neurons and 60 million connections.</p>
+        <div class="test-your-knowledge">
+            <h3>Test Your Knowledge</h3>
+            <h4>Given what you&apos;ve learned, what might be the next breakthrough in neural networks?</h4>
+            <p>
+                <label><input type="radio" name="breakthrough-answer" value="option1"> Even bigger networks with more neurons</label><br>
+                <label><input type="radio" name="breakthrough-answer" value="option2"> More efficient learning algorithms</label><br>
+                <label><input type="radio" name="breakthrough-answer" value="option3"> Completely new types of neural networks</label>
+            </p>
+            <button class="check-button" onclick="checkBreakthroughAnswer()">Check</button>
+            <div id="breakthrough-result" style="display: none; margin-top: 10px; font-weight: bold;"></div>
+            <div id="breakthrough-explanation" style="display: none; margin-top: 10px;"></div>
         </div>
     </section>
 
     <script>
         // Show the first section initially
         document.getElementById("section1").style.display = "block";
-        document.getElementById("section1").style.opacity = "1"; // Make the first section visible
+        document.getElementById("section1").style.opacity = "1";
 
-        // Function to show the next section with fade-in and then scroll to it
         function showNextSection(nextSectionId) {
             const currentButton = event.target;
             const nextSection = document.getElementById("section" + nextSectionId);
             
-            // Hide the clicked button
             currentButton.style.display = "none";
             
-            // Show the next section with a fade-in effect
             nextSection.style.display = "block";
             setTimeout(() => {
-                nextSection.style.opacity = "1"; // Fade in the section
+                nextSection.style.opacity = "1";
             }, 10);
 
-            // Scroll to the new section after it fades in
             setTimeout(() => {
                 nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 500); // Delay scrolling until fade-in completes
+            }, 500);
+        }
+
+        function revealThought(thoughtId) {
+            const thought = document.getElementById(thoughtId);
+            thought.style.display = "block";
+        }
+
+        function checkDevelopmentAnswer() {
+            const selectedAnswer = document.querySelector('input[name="development-answer"]:checked');
+            const result = document.getElementById("development-result");
+            const explanation = document.getElementById("development-explanation");
+            const checkButton = document.querySelector(".test-your-knowledge .check-button");
+
+            if (selectedAnswer) {
+                checkButton.style.display = "none";
+
+                if (selectedAnswer.value === "option1") {
+                    result.textContent = "Correct!";
+                    result.style.color = "#28a745";
+                } else {
+                    result.textContent = "Not quite. Try again!";
+                    result.style.color = "#dc3545";
+                }
+                result.style.display = "block";
+
+                explanation.innerHTML = "The gaming industry&apos;s demand for fast graphics processing led to the development of GPUs, which turned out to be perfect for neural network calculations.";
+                explanation.style.display = "block";
+            }
+        }
+
+        function checkBreakthroughAnswer() {
+            const selectedAnswer = document.querySelector('input[name="breakthrough-answer"]:checked');
+            const result = document.getElementById("breakthrough-result");
+            const explanation = document.getElementById("breakthrough-explanation");
+            const checkButton = document.querySelector(".test-your-knowledge .check-button");
+
+            if (selectedAnswer) {
+                checkButton.style.display = "none";
+
+                if (selectedAnswer.value === "option2") {
+                    result.textContent = "Correct!";
+                    result.style.color = "#28a745";
+                } else {
+                    result.textContent = "Not quite. Try again!";
+                    result.style.color = "#dc3545";
+                }
+                result.style.display = "block";
+
+                explanation.innerHTML = "Just as backpropagation was a crucial breakthrough, new learning algorithms might help networks learn more efficiently from less data.";
+                explanation.style.display = "block";
+            }
         }
     </script>
-
 </body>
 </html>
